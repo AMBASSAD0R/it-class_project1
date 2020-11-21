@@ -1,4 +1,5 @@
 def ft_len(mass):
+    #
     i = 0
     for g in mass:
         i += 1
