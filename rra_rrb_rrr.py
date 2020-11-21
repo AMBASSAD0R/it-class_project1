@@ -1,4 +1,4 @@
-from additional_functions import ft_rev_list, ft_len
+from additional_function import ft_rev_list, ft_len
 
 
 def rra(mass_a):
@@ -19,3 +19,6 @@ def rrb(mass_b):
 
 def rrr(mass_a, mass_b):
     return rra(mass_a), rrb(mass_b)
+
+
+print(rrb([1, 2, 3, 4]))
