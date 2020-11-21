@@ -29,6 +29,3 @@ def pb(mass_b, mass_a):
     mass_b = ft_rev_list(mass_b)
     mass_b.append(mass_a[0])
     return ft_rev_list(mass_b)
-
-
-print(pb([2, 3, 4], [1]))
