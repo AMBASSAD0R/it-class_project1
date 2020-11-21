@@ -1,8 +1,4 @@
-def ft_len(st):
-    kol = 0
-    for i in st:
-        kol += 1
-    return kol
+from additional_function import ft_len
 
 
 def sa(mass_a):

@@ -1,9 +1,4 @@
-def ft_len(mass):
-    #
-    i = 0
-    for g in mass:
-        i += 1
-    return i
+from additional_function import ft_len
 
 
 def ra(mass_a):
