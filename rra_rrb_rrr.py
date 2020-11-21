@@ -1,22 +1,21 @@
-from additional_function import ft_rev_list, ft_len
-
-
 def rra(mass_a):
     """сдвиг всех элементов стека a на 1 вниз"""
-    new_mass = list()
-    ft_rev_list(mass_a).append(mass_a[0])
-    for i in range(ft_len(ft_rev_list(mass_a)) - 1):
-        new_mass.append(mass_a[i])
-    return new_mass
+    res = [0] + mass_a
+    res[0] = res[-1]
+    res_x = []
+    for i in range(len(res) - 1):
+        res_x.append(res[i])
+    return res_x
 
 
 def rrb(mass_b):
     """ сдвиг всех элементов стека b на 1 вниз"""
-    new_mass = list()
-    ft_rev_list(mass_b).append(mass_b[0])
-    for i in range(ft_len(ft_rev_list(mass_b)) - 1):
-        new_mass.append(mass_b[i])
-    return new_mass
+    res = [0] + mass_b
+    res[0] = res[-1]
+    res_x = []
+    for i in range(len(res) - 1):
+        res_x.append(res[i])
+    return res_x
 
 
 def rrr(mass_a, mass_b):
