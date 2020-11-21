@@ -2,6 +2,9 @@ from additional_function import ft_len
 
 
 def ra(mass_a):
+    """
+    сдвиг всех элементов стека а на 1 вверх. Первый элемент становится последним
+    """
     x = mass_a[0]
     mass_cop = []
     for i in range(1, ft_len(mass_a)):
@@ -11,6 +14,9 @@ def ra(mass_a):
 
 
 def rb(mass_b):
+    """
+    сдвиг всех элементов стека b на 1 вверх. Первый элемент становится последним
+    """
     x = mass_b[0]
     mass_cop = []
     for i in range(1, ft_len(mass_b)):
@@ -20,4 +26,5 @@ def rb(mass_b):
 
 
 def rr(mass_a, mass_b):
+    """ra и rb одновременно"""
     return ra(mass_a), rb(mass_b)

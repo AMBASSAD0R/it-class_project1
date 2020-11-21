@@ -1,21 +1,8 @@
-def ft_len(mass):
-    count = 0
-    for _ in mass:
-        count += 1
-    return count
-
-
-def ft_rev_list(mass):
-    long = ft_len(mass)
-    for i in range(ft_len(mass) // 2):
-        x = mass[0 + i]
-        u = mass[long - i - 1]
-        mass[0 + i] = u
-        mass[long - i - 1] = x
-    return mass
+from additional_function import ft_rev_list
 
 
 def pa(mass_a, mass_b):
+    """взять первый элемент в верхней части b и поместите его в верхнюю часть a."""
     if not mass_b:
         return None
     mass_a = ft_rev_list(mass_a)
@@ -24,6 +11,7 @@ def pa(mass_a, mass_b):
 
 
 def pb(mass_b, mass_a):
+    """взять первый элемент в верхней части a и поместите его в верхнюю часть b"""
     if not mass_a:
         return None
     mass_b = ft_rev_list(mass_b)

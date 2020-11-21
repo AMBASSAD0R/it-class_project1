@@ -2,6 +2,7 @@ from additional_function import ft_rev_list, ft_len
 
 
 def rra(mass_a):
+    """сдвиг всех элементов стека a на 1 вниз"""
     new_mass = list()
     ft_rev_list(mass_a).append(mass_a[0])
     for i in range(ft_len(ft_rev_list(mass_a)) - 1):
@@ -10,6 +11,7 @@ def rra(mass_a):
 
 
 def rrb(mass_b):
+    """ сдвиг всех элементов стека b на 1 вниз"""
     new_mass = list()
     ft_rev_list(mass_b).append(mass_b[0])
     for i in range(ft_len(ft_rev_list(mass_b)) - 1):
@@ -18,7 +20,5 @@ def rrb(mass_b):
 
 
 def rrr(mass_a, mass_b):
+    """одновременно выполнить rra и rrb"""
     return rra(mass_a), rrb(mass_b)
-
-
-print(rrb([1, 2, 3, 4]))
