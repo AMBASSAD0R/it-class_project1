@@ -29,7 +29,7 @@ def ft_find_lst(mass, char):
             return i
 
 
-def ft_slice(mas, start=0, end=-1):
+def ft_slice(mas, start, end):
     mas_sliced = []
     for i in range(start, end):
         mas_sliced.append(mas[i])
