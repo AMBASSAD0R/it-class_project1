@@ -30,5 +30,6 @@ while mass_a:
             mass_a = ra(mass_a)
             print('ra')
 
+mass_a = mass_b
 
-print(mass_b)
+print(mass_a)
