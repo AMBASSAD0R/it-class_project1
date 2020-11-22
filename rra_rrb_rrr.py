@@ -8,7 +8,7 @@ def rra(mass_a):
     res_x = []
     for i in range(ft_len(res) - 1):
         res_x.append(res[i])
-    return res_x, "rra"
+    return res_x
 
 
 def rrb(mass_b):
@@ -18,9 +18,9 @@ def rrb(mass_b):
     res_x = []
     for i in range(ft_len(res) - 1):
         res_x.append(res[i])
-    return res_x, "rrb"
+    return res_x
 
 
 def rrr(mass_a, mass_b):
     """одновременно выполнить rra и rrb"""
-    return rra(mass_a), rrb(mass_b), "rrr"
+    return rra(mass_a), rrb(mass_b)

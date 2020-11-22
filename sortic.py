@@ -2,7 +2,7 @@ from rra_rrb_rrr import *
 from ra_rb_rr import *
 from additional_function import ft_find_lst, ft_len, ft_min
 
-mass_a = []
+mass_a = [5, 2, 3, 1, 4]
 mass_b = []
 
 number = input()

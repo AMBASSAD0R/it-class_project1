@@ -10,7 +10,7 @@ def ra(mass_a):
     for i in range(1, ft_len(mass_a)):
         mass_cop.append(mass_a[i])
     mass_cop.append(x)
-    return mass_cop, "ra"
+    return mass_cop
 
 
 def rb(mass_b):
@@ -22,9 +22,9 @@ def rb(mass_b):
     for i in range(1, ft_len(mass_b)):
         mass_cop.append(mass_b[i])
     mass_cop.append(x)
-    return mass_cop, "rb"
+    return mass_cop
 
 
 def rr(mass_a, mass_b):
     """ra и rb одновременно"""
-    return ra(mass_a), rb(mass_b), "rr"
+    return ra(mass_a), rb(mass_b)
