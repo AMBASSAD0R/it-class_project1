@@ -1,4 +1,4 @@
-from additional_function import ft_rev_list, ft_len
+from additional_function import ft_len
 
 
 def rra(mass_a):
@@ -6,7 +6,7 @@ def rra(mass_a):
     res = [0] + mass_a
     res[0] = res[-1]
     res_x = []
-    for i in range(len(res) - 1):
+    for i in range(ft_len(res) - 1):
         res_x.append(res[i])
     return res_x
 
@@ -16,7 +16,7 @@ def rrb(mass_b):
     res = [0] + mass_b
     res[0] = res[-1]
     res_x = []
-    for i in range(len(res) - 1):
+    for i in range(ft_len(res) - 1):
         res_x.append(res[i])
     return res_x
 
