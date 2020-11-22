@@ -1,13 +1,8 @@
 from rra_rrb_rrr import *
 from ra_rb_rr import *
-from additional_function import ft_find_lst, ft_len, ft_min, ft_slice
-from sys import argv
+from additional_function import ft_find_lst, ft_len, ft_min
 
-
-if ft_len(argv) > 0:
-    mass_a = ft_slice(argv, 1, ft_len(argv))
-else:
-    mass_a = []
+mass_a = []
 mass_b = []
 
 number = input()
@@ -24,7 +19,7 @@ while mass_a:
     if ft_min(mass_a) == mass_a[0]:
         print('pb')
         mass_b.append(mass_a[0])
-        mass_a = ft_slice(mass_a, 1, ft_len(mass_a))
+        mass_a = mass_a[1:]
     else:
         # находим рассстояние от концов
         # списка до концов списка и находим до куда ближе
@@ -35,5 +30,6 @@ while mass_a:
             mass_a = ra(mass_a)
             print('ra')
 
+mass_a = mass_b
 
-print(mass_b)
+print(mass_a)
