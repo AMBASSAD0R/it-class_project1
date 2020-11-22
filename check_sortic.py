@@ -1,4 +1,4 @@
-from sortic_func import sortic
+from sotric_func import sortic
 
 mass_a_numbers = []
 mass_a_commands = []
