@@ -1,6 +1,7 @@
+from additional_function import *
 from rra_rrb_rrr import *
 from ra_rb_rr import *
-from additional_function import ft_find_lst, ft_len, ft_min, ft_slice
+from sys import argv
 
 
 # функция, которая выводит визуализацию процесса сортировки в output.txt
@@ -16,19 +17,21 @@ def txt_output(fname, command):
 # функция, которая выводит визуализацию процесса сортировки в консоль
 
 def console_output(command):
-    print('COMMAND' + '\033[31m {}'.format(command) + '\033[0m')
+    print('COMMAND' + '\033[31m', command, '\033[0m')
     print(f'MASSIVE_A: {mass_a}')
     print(f'MASSIVE_B: {mass_b}')
     print('=' * ft_len(f'MASSIVE_B: {mass_b}'))
 
 
+# mass_a = ft_slice(argv, 1, ft_len(argv)) <--- для ввода в строку в терминале
+
 mass_a = []
 mass_b = []
 
 # Ввод в одну строку
-# numbers = input()
-# for i in range(0, ft_len(numbers), 2):
-#     mass_a.append(int(numbers[i]))
+numbers = input()
+for i in range(0, ft_len(numbers), 2):
+    mass_a.append(int(numbers[i]))
 
 
 file = open('input.txt', mode='r', encoding='UTF-8')
@@ -36,7 +39,8 @@ lines = file.readlines()
 for line in lines:
     for char in line:
         if char != ' ':
-            mass_a.append(int(char))
+            mass_a.append(char)
+
 file.close()
 
 iterator = 1
