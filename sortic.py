@@ -29,9 +29,9 @@ mass_a = []
 mass_b = []
 
 # Ввод в одну строку
-numbers = input()
-for i in range(0, ft_len(numbers), 2):
-    mass_a.append(int(numbers[i]))
+# numbers = input()
+# for i in range(0, ft_len(numbers), 2):
+#     mass_a.append(int(numbers[i]))
 
 
 file = open('input.txt', mode='r', encoding='UTF-8')
