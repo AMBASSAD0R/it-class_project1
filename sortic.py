@@ -3,6 +3,9 @@ from rra_rrb_rrr import *
 from ra_rb_rr import *
 from sys import argv
 
+mass_a = []
+mass_b = []
+
 
 # функция, которая выводит визуализацию процесса сортировки в output.txt
 
@@ -23,12 +26,9 @@ def console_output(command):
     print('=' * ft_len(f'MASSIVE_B: {mass_b}'))
 
 
-mass_a = []
-mass_b = []
-
-
 file = open('input.txt', mode='r', encoding='UTF-8')
-file.read()
+
+file.read()  # читаем файл
 
 if ft_len(file) > 0:
     lines = file.readlines()
@@ -44,7 +44,6 @@ else:
         for i in range(0, ft_len(numbers), 2):
             mass_a.append(int(numbers[i]))
     else:
-        mass_a.append(numbers)
         while numbers != '!':
             mass_a.append(int(numbers))
             numbers = input()

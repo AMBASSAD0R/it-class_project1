@@ -1,0 +1,40 @@
+Iteration: 1
+COMMAND rra
+MASSIVE_A: [4, 2, 3, 1]
+MASSIVE_B: []
+=============
+Iteration: 2
+COMMAND rra
+MASSIVE_A: [1, 4, 2, 3]
+MASSIVE_B: []
+=============
+Iteration: 3
+COMMAND pb
+MASSIVE_A: [1, 4, 2, 3]
+MASSIVE_B: []
+=============
+Iteration: 4
+COMMAND rra
+MASSIVE_A: [3, 4, 2]
+MASSIVE_B: [1]
+==============
+Iteration: 5
+COMMAND rra
+MASSIVE_A: [2, 3, 4]
+MASSIVE_B: [1]
+==============
+Iteration: 6
+COMMAND pb
+MASSIVE_A: [2, 3, 4]
+MASSIVE_B: [1]
+==============
+Iteration: 7
+COMMAND pb
+MASSIVE_A: [3, 4]
+MASSIVE_B: [1, 2]
+=================
+Iteration: 8
+COMMAND pb
+MASSIVE_A: [4]
+MASSIVE_B: [1, 2, 3]
+====================
