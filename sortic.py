@@ -23,23 +23,31 @@ def console_output(command):
     print('=' * ft_len(f'MASSIVE_B: {mass_b}'))
 
 
-# mass_a = ft_slice(argv, 1, ft_len(argv)) <--- для ввода в строку в терминале
-
 mass_a = []
 mass_b = []
 
-# Ввод в одну строку
-# numbers = input()
-# for i in range(0, ft_len(numbers), 2):
-#     mass_a.append(int(numbers[i]))
-
 
 file = open('input.txt', mode='r', encoding='UTF-8')
-lines = file.readlines()
-for line in lines:
-    for char in line:
-        if char != ' ':
-            mass_a.append(char)
+file.read()
+
+if ft_len(file) > 0:
+    lines = file.readlines()
+    for line in lines:
+        for char in line:
+            if char != ' ':
+                mass_a.append(char)
+elif ft_len(argv) > 1:
+    mass_a = ft_slice(argv, 1, ft_len(argv))
+else:
+    numbers = input()
+    if ' ' in numbers:
+        for i in range(0, ft_len(numbers), 2):
+            mass_a.append(int(numbers[i]))
+    else:
+        mass_a.append(numbers)
+        while numbers != '!':
+            mass_a.append(int(numbers))
+            numbers = input()
 
 file.close()
 
