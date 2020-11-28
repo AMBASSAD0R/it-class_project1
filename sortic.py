@@ -6,6 +6,7 @@ from sys import argv
 mass_a = []
 mass_b = []
 
+
 def ft_split(text):
     tmp = ""
     mass = []
@@ -51,6 +52,8 @@ if ft_len(file) > 0:
                 mass_a.append(char)
 elif ft_len(argv) > 1:
     mass_a = ft_slice(argv, 1, ft_len(argv))
+    for i in range(ft_len(mass_a)):
+        mass_a[i] = int(mass_a[i])
 else:
     numbers = input()
     if ' ' in numbers:
