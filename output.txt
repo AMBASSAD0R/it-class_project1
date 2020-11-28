@@ -1,40 +1,35 @@
 Iteration: 1
 COMMAND rra
-MASSIVE_A: [4, 2, 3, 1]
+MASSIVE_A: [22, 23, 324, 1334, 655]
 MASSIVE_B: []
 =============
 Iteration: 2
-COMMAND rra
-MASSIVE_A: [1, 4, 2, 3]
+COMMAND pb
+MASSIVE_A: [22, 23, 324, 1334, 655]
 MASSIVE_B: []
 =============
 Iteration: 3
 COMMAND pb
-MASSIVE_A: [1, 4, 2, 3]
-MASSIVE_B: []
-=============
+MASSIVE_A: [23, 324, 1334, 655]
+MASSIVE_B: [22]
+===============
 Iteration: 4
-COMMAND rra
-MASSIVE_A: [3, 4, 2]
-MASSIVE_B: [1]
-==============
+COMMAND pb
+MASSIVE_A: [324, 1334, 655]
+MASSIVE_B: [22, 23]
+===================
 Iteration: 5
 COMMAND rra
-MASSIVE_A: [2, 3, 4]
-MASSIVE_B: [1]
-==============
+MASSIVE_A: [655, 1334]
+MASSIVE_B: [22, 23, 324]
+========================
 Iteration: 6
 COMMAND pb
-MASSIVE_A: [2, 3, 4]
-MASSIVE_B: [1]
-==============
+MASSIVE_A: [655, 1334]
+MASSIVE_B: [22, 23, 324]
+========================
 Iteration: 7
 COMMAND pb
-MASSIVE_A: [3, 4]
-MASSIVE_B: [1, 2]
-=================
-Iteration: 8
-COMMAND pb
-MASSIVE_A: [4]
-MASSIVE_B: [1, 2, 3]
-====================
+MASSIVE_A: [1334]
+MASSIVE_B: [22, 23, 324, 655]
+=============================

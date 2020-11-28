@@ -41,7 +41,8 @@ elif ft_len(argv) > 1:
 else:
     numbers = input()
     if ' ' in numbers:
-        for i in range(0, ft_len(numbers), 2):
+        numbers = numbers.split()
+        for i in range(0, ft_len(numbers)):
             mass_a.append(int(numbers[i]))
     else:
         while numbers != '!':
