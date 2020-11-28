@@ -6,19 +6,6 @@ from sys import argv
 mass_a = []
 mass_b = []
 
-def ft_split(text):
-    tmp = ""
-    mass = []
-    for ch in text:
-        if ch == ' ' and tmp:
-            mass.append(int(tmp))
-            tmp = ""
-        else:
-            tmp += ch
-    if tmp:
-        mass.append(int(tmp))
-    return mass
-
 
 # функция, которая выводит визуализацию процесса сортировки в output.txt
 
@@ -51,10 +38,12 @@ if ft_len(file) > 0:
                 mass_a.append(char)
 elif ft_len(argv) > 1:
     mass_a = ft_slice(argv, 1, ft_len(argv))
+    for i in range(ft_len(mass_a)):
+        mass_a[i] = int(mass_a[i])
 else:
     numbers = input()
     if ' ' in numbers:
-        numbers = ft_split(numbers)
+        numbers = numbers.split()
         for i in range(0, ft_len(numbers)):
             mass_a.append(int(numbers[i]))
     else:
