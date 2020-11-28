@@ -6,6 +6,19 @@ from sys import argv
 mass_a = []
 mass_b = []
 
+def ft_split(text):
+    tmp = ""
+    mass = []
+    for ch in text:
+        if ch == ' ' and tmp:
+            mass.append(int(tmp))
+            tmp = ""
+        else:
+            tmp += ch
+    if tmp:
+        mass.append(int(tmp))
+    return mass
+
 
 # функция, которая выводит визуализацию процесса сортировки в output.txt
 
@@ -41,7 +54,7 @@ elif ft_len(argv) > 1:
 else:
     numbers = input()
     if ' ' in numbers:
-        numbers = numbers.split()
+        numbers = ft_split(numbers)
         for i in range(0, ft_len(numbers)):
             mass_a.append(int(numbers[i]))
     else:
