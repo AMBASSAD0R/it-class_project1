@@ -7,6 +7,32 @@ mass_a = []
 mass_b = []
 
 
+# проверка корректности введенного значения
+
+def is_number(number):
+    wrong_symbols = list('QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm'
+                         'ЁЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮёйцукенгшщзхъфывапролджэячсмитьбю'
+                         '!"№;%:?*()_+~!@#$%^&*()_+{}:"><?/.,][|/')
+    for i in number:
+        if i in wrong_symbols or (number[0] == '0' and ft_len(number) > 1):
+            return False
+    return True
+
+
+def ft_split(string):
+    tmp = ''
+    mass = []
+    for ch in string:
+        if ch == ' ' and tmp:
+            mass.append(int(tmp))
+            tmp = ''
+        else:
+            tmp += ch
+    if tmp:
+        mass.append(int(tmp))
+    return mass
+
+
 # функция, которая выводит визуализацию процесса сортировки в output.txt
 
 
@@ -28,14 +54,13 @@ def console_output(command):
 
 file = open('input.txt', mode='r', encoding='UTF-8')
 
-file.read()  # читаем файл
+lines = file.readlines()  # читаем файл
+lines = [ft_split(line) for line in lines]  # распарсили данные из файла; example: ['123 321'] -> ['123', '321']
 
-if ft_len(file) > 0:
-    lines = file.readlines()
+if ft_len(lines) > 0:
     for line in lines:
-        for char in line:
-            if char != ' ':
-                mass_a.append(char)
+        for number in line:
+            mass_a.append(int(number))
 elif ft_len(argv) > 1:
     mass_a = ft_slice(argv, 1, ft_len(argv))
     for i in range(ft_len(mass_a)):
@@ -43,13 +68,18 @@ elif ft_len(argv) > 1:
 else:
     numbers = input()
     if ' ' in numbers:
-        numbers = numbers.split()
+        numbers = ft_split(numbers)
         for i in range(0, ft_len(numbers)):
             mass_a.append(int(numbers[i]))
     else:
         while numbers != '!':
-            mass_a.append(int(numbers))
-            numbers = input()
+            if is_number(numbers):
+                mass_a.append(int(numbers))
+                numbers = input()
+            else:
+                print('Вы ввели несуществующее число!!!')
+                print('Введите другое')
+                numbers = input()
 
 file.close()
 
