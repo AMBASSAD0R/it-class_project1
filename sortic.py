@@ -88,6 +88,10 @@ iterator = 1
 
 file2 = open('output.txt', mode='w')
 
+file2.write(f'INITIAL MASSIVE: {mass_a}' + '\n')
+print(f'INITIAL MASSIVE: {mass_a}')
+print('=' * ft_len(f'MASSIVE_B: {mass_b}') + '\n')
+
 while mass_a:
     file2.write(f'Iteration: {iterator}' + '\n')
     print(f'Iteration: {iterator}')
@@ -98,7 +102,6 @@ while mass_a:
     txt_output(file2, 'pb')
 
     iterator += 1
-
 
 print(mass_b)
 
@@ -128,5 +131,8 @@ while mass_b:
             console_output('rb')
 
     iterator += 1
+
+file2.write(f'SORTED MASSIVE: {mass_a}' + '\n')
+print(f'SORTED MASSIVE: {mass_a}')
 
 file2.close()
