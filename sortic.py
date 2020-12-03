@@ -89,7 +89,6 @@ iterator = 1
 file2 = open('output.txt', mode='w')
 
 while mass_a:
-    iterator += 1
     file2.write(f'Iteration: {iterator}' + '\n')
     print(f'Iteration: {iterator}')
 
@@ -97,6 +96,8 @@ while mass_a:
     mass_a = ft_slice(mass_a, 1, ft_len(mass_a))
     console_output('pb')
     txt_output(file2, 'pb')
+
+    iterator += 1
 
 
 print(mass_b)
