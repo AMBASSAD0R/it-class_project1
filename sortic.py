@@ -1,6 +1,7 @@
 from additional_function import *
 from rra_rrb_rrr import *
 from ra_rb_rr import *
+from pa_pb import *
 from sys import argv
 
 mass_a = []
@@ -69,29 +70,43 @@ iterator = 1
 file2 = open('output.txt', mode='w')
 
 while mass_a:
+    file2.write(f'Iteration: {iterator}' + '\n')
+    print(f'Iteration: {iterator}')
+
+    pb(mass_b, mass_a)
+    mass_a = ft_slice(mass_a, 1, ft_len(mass_a))
+    console_output('pb')
+    txt_output(file2, 'pb')
+
+    iterator += 1
+
+
+print(mass_b)
+
+while mass_b:
 
     # индекс минимального элмента
-    minimal_index = ft_find_lst(mass_a, ft_min(mass_a))
+    minimal_index = ft_find_lst(mass_b, ft_min(mass_b))
     file2.write(f'Iteration: {iterator}' + '\n')
     print(f'Iteration: {iterator}')
 
     # если первый элемент - минимум, то убераем его в другой стэк и сортируем дальше
-    if ft_min(mass_a) == mass_a[0]:
-        txt_output(file2, 'pb')
-        mass_b.append(mass_a[0])
-        mass_a = ft_slice(mass_a, 1, ft_len(mass_a))
-        console_output('pb')
+    if ft_min(mass_b) == mass_b[0]:
+        txt_output(file2, 'pa')
+        mass_a.append(mass_b[0])
+        mass_b = ft_slice(mass_b, 1, ft_len(mass_b))
+        console_output('pa')
     else:
         # находим рассстояние от концов
         # списка до концов списка и находим до куда ближе
-        if minimal_index >= ft_len(mass_a) - minimal_index - 1:
-            mass_a = rra(mass_a)
-            txt_output(file2, 'rra')
-            console_output('rra')
-        elif minimal_index <= ft_len(mass_a) - minimal_index - 1:
-            mass_a = ra(mass_a)
-            txt_output(file2, 'ra')
-            console_output('ra')
+        if minimal_index >= ft_len(mass_b) - minimal_index - 1:
+            mass_b = rrb(mass_b)
+            txt_output(file2, 'rrb')
+            console_output('rrb')
+        elif minimal_index <= ft_len(mass_b) - minimal_index - 1:
+            mass_b = rb(mass_b)
+            txt_output(file2, 'rb')
+            console_output('rb')
 
     iterator += 1
 
